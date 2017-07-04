@@ -1,0 +1,12 @@
+Package: dcme
+Version: 0.0.0.9000
+Title: Data Complexity Measures for Binary Data Sets
+Description: Data complexity measures for binary data sets.
+Authors@R: person("Romero", "Morais", email = "romero.barata@gmail.com", 
+                  role = c("aut", "cre"))
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.4.1)
+RoxygenNote: 6.0.1
