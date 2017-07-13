@@ -23,3 +23,16 @@ num_examples <- function(x){
 num_features <- function(x){
   ncol(x)
 }
+
+#' The Number of Classes in the Data Set.
+#'
+#' \code{num_classes} computes the number of classes present in the input
+#' data set.
+#'
+#' @inheritParams F1
+#' @return The number of classes present in the input data set.
+#' @export
+
+num_classes <- function(y){
+  length(unique(y))
+}
