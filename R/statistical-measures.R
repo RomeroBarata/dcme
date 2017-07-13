@@ -32,3 +32,22 @@ sd_ratio <- function(x, y){
 
   exp(M / (p * sum(n_per_class - 1)))
 }
+
+#' Mean Absolute Correlation Coefficient.
+#'
+#' \code{corr_abs} computes the correlations between all pairs of features
+#' for each class and then averages these values for all pairs and all classes.
+#'
+#' @inheritParams F1
+#' @return The mean absolute correlation coefficient of the input data set.
+#' @export
+
+corr_abs <- function(x, y){
+  if (!is.data.frame(x)) x <- as.data.frame(x)
+
+  x_groups <- split(x, y)
+  mean_abs_cor_per_class <- vapply(x_groups,
+                                   function(x) mean(abs(cor(x))),
+                                   numeric(1))
+  mean(mean_abs_cor_per_class)
+}
