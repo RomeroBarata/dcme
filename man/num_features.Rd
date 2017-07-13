@@ -7,7 +7,8 @@
 num_features(x)
 }
 \arguments{
-\item{x}{A data frame containing the features of the data.}
+\item{x}{A data frame, or an object that can be converted to a data frame,
+containing (only) the features of the data.}
 }
 \value{
 The number of features present in the input data set.

@@ -7,10 +7,11 @@
 F2(x, y)
 }
 \arguments{
-\item{x}{A data frame containing the features of the data.}
+\item{x}{A data frame, or an object that can be converted to a data frame,
+containing (only) the features of the data.}
 
-\item{y}{A vector or factor determining the class of each example in
-\code{x}.}
+\item{y}{A vector (or factor) determining the class of each example in
+the data.}
 }
 \value{
 The Volume of Overlap Region of a binary data set.
