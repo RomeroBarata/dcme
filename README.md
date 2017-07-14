@@ -1,7 +1,6 @@
 # dcme
 ## Overview
-The `dcme` package provides functions to compute complexity measures for data
-sets.
+The `dcme` package provides functions to compute data complexity measures.
 
 ## Installation
 `dcme` is under development and not yet available on CRAN. You can install the
