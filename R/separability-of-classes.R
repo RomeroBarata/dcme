@@ -29,13 +29,13 @@ N2 <- function(x, y){
   inter_intra_dists[["TRUE"]] / inter_intra_dists[["FALSE"]]
 }
 
-#' Error Rate of 1NN Classifier.
+#' Error Rate of 1-NN Classifier.
 #'
-#' \code{N3} computes the error rate of the 1NN classifier using the
+#' \code{N3} computes the error rate of the 1-NN classifier using the
 #' leave-one-out strategy.
 #'
 #' @inheritParams F1
-#' @return The leave-one-out error estimate of the 1NN classifier for the
+#' @return The leave-one-out error estimate of the 1-NN classifier for the
 #'  input data set.
 #' @export
 

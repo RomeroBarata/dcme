@@ -2,7 +2,7 @@
 % Please edit documentation in R/separability-of-classes.R
 \name{N3}
 \alias{N3}
-\title{Error Rate of 1NN Classifier.}
+\title{Error Rate of 1-NN Classifier.}
 \usage{
 N3(x, y)
 }
@@ -14,10 +14,10 @@ containing (only) the features of the data.}
 the data.}
 }
 \value{
-The leave-one-out error estimate of the 1NN classifier for the
+The leave-one-out error estimate of the 1-NN classifier for the
  input data set.
 }
 \description{
-\code{N3} computes the error rate of the 1NN classifier using the
+\code{N3} computes the error rate of the 1-NN classifier using the
 leave-one-out strategy.
 }
