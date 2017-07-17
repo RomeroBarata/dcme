@@ -22,7 +22,15 @@ sd_ratio <- function(x, y){
   gamma <- 1 - a * b
 
   cov_mat <- cov(x)
-  inv_cov_mat_per_class <- lapply(x_groups, function(x) solve(cov(x)))
+  inv_cov_mat_per_class <- lapply(x_groups,
+                                  function(x){
+                                    tryCatch(solve(cov(x)),
+                                             error = function(e) NA)
+                                  })
+  if (anyNA(inv_cov_mat_per_class)){
+    warning("At least one of the class matrices was singular. Returning NA.")
+    return(NA)
+  }
 
   a <- n_per_class - 1
   b <- vapply(inv_cov_mat_per_class,
