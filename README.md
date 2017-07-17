@@ -18,6 +18,9 @@ The following complexity measures are currently implemented:
 - Number of Observations
 - Number of Features
 - Number of Classes
+- Imbalance Ratio (IR)
+
+`IR` is defined only for binary data sets.
 
 ### Statistical Measures
 - Geometric Mean Ratio of Standard Deviations
@@ -36,3 +39,14 @@ sets. General versions will be made available soon.
 
 ### Measures of Geometry, Topology, and Density of Manifolds
 - Average Number of Points per Dimension (T2)
+
+## References
+Definitions and explanations of most functions implemented in the `dcme`
+package can be found in the following literature:
+
+[1] Michie, D., Spiegelhalter, D. J., & Taylor, C. C. (1994). **Machine
+learning, neural and statistical classification**.
+
+[2] Ho, T. K., & Basu, M. (2002). **Complexity measures of supervised
+classification problems**. _IEEE transactions on pattern analysis and machine
+intelligence, 24_(3), 289-300.
