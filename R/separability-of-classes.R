@@ -9,6 +9,10 @@
 #' @export
 
 N2 <- function(x, y){
+  if (!requireNamespace("kknn", quietly = TRUE)){
+    stop("Package kknn is required for this function. Please install it.",
+         call. = FALSE)
+  }
   if (!is.data.frame(x)) x <- as.data.frame(x)
   if (!is.factor(y)) y <- as.factor(y)
 
@@ -40,6 +44,10 @@ N2 <- function(x, y){
 #' @export
 
 N3 <- function(x, y){
+  if (!requireNamespace("kknn", quietly = TRUE)){
+    stop("Package kknn is required for this function. Please install it.",
+         call. = FALSE)
+  }
   if (!is.data.frame(x)) x <- as.data.frame(x)
   if (!is.factor(y)) y <- as.factor(y)
 
