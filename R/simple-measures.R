@@ -36,3 +36,22 @@ num_features <- function(x){
 num_classes <- function(y){
   length(unique(y))
 }
+
+#' The Imbalance Ratio (IR) of a Data Set.
+#'
+#' \code{IR} computes the imbalance ratio of a binary data set. It is defined
+#' as the ratio of the number of majority class examples to the number of
+#' minority class examples.
+#'
+#' @inheritParams F1
+#' @return The imbalance ratio of the input data set.
+#' @export
+
+IR <- function(y){
+  if (length(unique(y)) != 2){
+    stop("Data must have (only) 2 classes.")
+  }
+
+  y_contingency_table <- table(y)
+  max(y_contingency_table) / min(y_contingency_table)
+}
