@@ -13,7 +13,9 @@ F1 <- function(x, y){
   if (!is.data.frame(x)) x <- as.data.frame(x)
 
   x_groups <- split(x, y)
-  if (length(x_groups) != 2) stop("Data must have (only) 2 classes.")
+  if (length(x_groups) != 2){
+    stop("Data must have (only) 2 classes.", call. = FALSE)
+  }
 
   means_and_sds <- vector("list", length = length(x_groups))
   for (i in seq_along(x_groups)){
@@ -40,7 +42,9 @@ F2 <- function(x, y){
   if (!is.data.frame(x)) x <- as.data.frame(x)
 
   x_groups <- split(x, y)
-  if (length(x_groups) != 2) stop("Data must have (only) 2 classes.")
+  if (length(x_groups) != 2){
+    stop("Data must have (only) 2 classes.", call. = FALSE)
+  }
 
   maxs_and_mins <- vector("list", length = length(x_groups))
   for (i in seq_along(x_groups)){
