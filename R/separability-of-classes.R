@@ -29,6 +29,11 @@ N2 <- function(x, y){
   inter_intra_dists <- vapply(split(data_1nn_dist, y == data_1nn_class),
                               mean,
                               numeric(1))
+  if (length(inter_intra_dists) == 1){
+    warning("All 1-NNs match the examples' class. Returning NA.",
+            call. = FALSE)
+    return(NA)
+  }
   # "TRUE" == intra, "FALSE" == inter
   inter_intra_dists[["TRUE"]] / inter_intra_dists[["FALSE"]]
 }
