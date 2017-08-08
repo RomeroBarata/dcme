@@ -60,6 +60,55 @@ num_features <- function(x){
   ncol(x)
 }
 
+#' The Number of Numeric Features in the Data Set.
+#'
+#' \code{num_features_numeric} computes the number of numeric features
+#' present in the input data set.
+#'
+#' @inheritParams F1
+#' @return The number of numeric features present in the input data set.
+#' @export
+
+num_features_numeric <- function(x){
+  if (!is.data.frame(x)) x <- as.data.frame(x)
+
+  sum(vapply(x, is.numeric, logical(1)))
+}
+
+#' The Number of Binary Features in the Data Set.
+#'
+#' \code{num_features_binary} computes the number of binary features present
+#' in the input data set. NA values are ignored.
+#'
+#' @inheritParams F1
+#' @return The number of binary features present in the input data set.
+#' @export
+
+num_features_binary <- function(x){
+  if (!is.data.frame(x)) x <- as.data.frame(x)
+
+  is_binary <- function(x){
+    length(unique(x[!is.na(x)])) == 2
+  }
+
+  sum(vapply(x, is_binary, logical(1)))
+}
+
+#' The Number of Categorical Feautures in the Data Set.
+#'
+#' \code{num_features_categorical} computes the number of categorical
+#' features present in the input data set.
+#'
+#' @inheritParams F1
+#' @return The number of categorical features present in the input data set.
+#' @export
+
+num_features_categorical <- function(x){
+  if (!is.data.frame(x)) x <- as.data.frame(x)
+
+  sum(vapply(x, is.character, logical(1)))
+}
+
 #' The Number of Classes in the Data Set.
 #'
 #' \code{num_classes} computes the number of classes present in the input
