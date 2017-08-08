@@ -21,7 +21,7 @@ num_examples <- function(x){
 #' @return The number of examples in the majority class.
 #' @export
 
-num_examples_majority <- function(x, y){
+num_examples_majority <- function(y){
   if (length(unique(y)) != 2){
     stop("Data must have (only) 2 classes.")
   }
@@ -39,7 +39,7 @@ num_examples_majority <- function(x, y){
 #' @return The number of examples in the minority class.
 #' @export
 
-num_examples_minority <- function(x, y){
+num_examples_minority <- function(y){
   if (length(unique(y)) != 2){
     stop("Data must have (only) 2 classes.")
   }

@@ -4,12 +4,9 @@
 \alias{num_examples_minority}
 \title{The Number of Observations in the Minority Class.}
 \usage{
-num_examples_minority(x, y)
+num_examples_minority(y)
 }
 \arguments{
-\item{x}{A data frame, or an object that can be converted to a data frame,
-containing (only) the features of the data.}
-
 \item{y}{A vector (or factor) determining the class of each example in
 the data.}
 }
