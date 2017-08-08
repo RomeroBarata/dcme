@@ -29,6 +29,24 @@ num_examples_majority <- function(x, y){
   max(table(y))
 }
 
+#' The Number of Observations in the Minority Class.
+#'
+#' \code{num_examples_minority} computes the number of examples in the
+#' minority class. It assumes the number of classes in the input data set is
+#' two.
+#'
+#' @inheritParams F1
+#' @return The number of examples in the minority class.
+#' @export
+
+num_examples_minority <- function(x, y){
+  if (length(unique(y)) != 2){
+    stop("Data must have (only) 2 classes.")
+  }
+
+  min(table(y))
+}
+
 #' The Number of Features in the Data Set.
 #'
 #' \code{num_features} computes the number of features present in the input
