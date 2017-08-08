@@ -8,7 +8,7 @@ N2(x, y)
 }
 \arguments{
 \item{x}{A data frame, or an object that can be converted to a data frame,
-containing (only) the features of the data.}
+containing only the features of the data.}
 
 \item{y}{A vector (or factor) determining the class of each example in
 the data.}

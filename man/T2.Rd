@@ -8,7 +8,7 @@ T2(x)
 }
 \arguments{
 \item{x}{A data frame, or an object that can be converted to a data frame,
-containing (only) the features of the data.}
+containing only the features of the data.}
 }
 \value{
 The average number of points per dimension of the input data set.
