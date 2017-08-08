@@ -19,10 +19,18 @@ The following complexity measures are currently implemented:
 - `num_examples_majority`: Number of Observations in the Majority Class
 - `num_examples_minority`: Number of Observations in the Minority Class
 - `num_features`: Number of Features
+- `num_features_numeric`: Number of Numeric Features
+- `num_features_binary`: Number of Binary Features
+- `num_features_categorical`: Number of Categorical Features
 - `num_classes`: Number of Classes
+- `proportion_examples_majority`: Proportion of Majority Examples
+- `proportion_examples_minority`: Proportion of Minority Examples
+- `proportion_features_numeric`: Proportion of Numeric Features
+- `proportion_features_binary`: Proportion of Binary Features
+- `proportion_features_categorical`: Proportion of Categorical Features
 - `IR`: Imbalance Ratio
 
-`num_examples_majority`, `num_examples_minority`, and `IR` are defined only for binary data sets.
+`num_examples_majority`, `num_examples_minority`, `proportion_examples_majority`, `proportion_examples_minority`, and `IR` are defined only for binary data sets.
 
 ### Statistical Measures
 - `sd_ratio`: Geometric Mean Ratio of Standard Deviations
