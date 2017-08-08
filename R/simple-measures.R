@@ -122,25 +122,6 @@ num_classes <- function(y){
   length(unique(y))
 }
 
-#' The Imbalance Ratio (IR) of a Data Set.
-#'
-#' \code{IR} computes the imbalance ratio of a binary data set. It is defined
-#' as the ratio of the number of majority class examples to the number of
-#' minority class examples.
-#'
-#' @inheritParams F1
-#' @return The imbalance ratio of the input data set.
-#' @export
-
-IR <- function(y){
-  if (length(unique(y)) != 2){
-    stop("Data must have (only) 2 classes.")
-  }
-
-  y_contingency_table <- table(y)
-  max(y_contingency_table) / min(y_contingency_table)
-}
-
 #' The Proportion of Majority Examples in the Data Set.
 #'
 #' \code{proportion_examples_majority} computes the proportion of examples
@@ -205,4 +186,18 @@ proportion_features_binary <- function(x){
 
 proportion_features_categorical <- function(x){
   num_features_categorical(x) / num_features(x)
+}
+
+#' The Imbalance Ratio (IR) of a Data Set.
+#'
+#' \code{IR} computes the imbalance ratio of a binary data set. It is defined
+#' as the ratio of the number of majority class examples to the number of
+#' minority class examples.
+#'
+#' @inheritParams F1
+#' @return The imbalance ratio of the input data set.
+#' @export
+
+IR <- function(y){
+  num_examples_majority(y) / num_examples_minority(y)
 }
