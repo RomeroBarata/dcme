@@ -18,7 +18,7 @@ split_x_and_y <- function(data, target = ncol(data)){
     target <- which(colnames(data) == target)
     x <- data[-target]
   } else{
-    stop("target must be either the target column index or name.",
+    stop("target must be either a column index or name.",
          call. = FALSE)
   }
 
