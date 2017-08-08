@@ -140,3 +140,69 @@ IR <- function(y){
   y_contingency_table <- table(y)
   max(y_contingency_table) / min(y_contingency_table)
 }
+
+#' The Proportion of Majority Examples in the Data Set.
+#'
+#' \code{proportion_examples_majority} computes the proportion of examples
+#' that belong to the majority class.
+#'
+#' @inheritParams F1
+#' @return The proportion of examples that belong to the majority class.
+#' @export
+
+proportion_examples_majority <- function(y){
+  num_examples_majority(y) / length(y)
+}
+
+#' The Proportion of Minority Examples in the Data Set.
+#'
+#' \code{proportion_examples_minority} computes the proportion of examples
+#' that belong to the minority class.
+#'
+#' @inheritParams F1
+#' @return The proportion of examples that belong to the minority class.
+#' @export
+
+proportion_examples_minority <- function(y){
+  num_examples_minority(y) / length(y)
+}
+
+#' The Proportion of Numeric Features in the Data Set.
+#'
+#' \code{proportion_features_numeric} computes the proportion of features
+#' that are numeric.
+#'
+#' @inheritParams F1
+#' @return The proportion of features that are numeric in the input data set.
+#' @export
+
+proportion_features_numeric <- function(x){
+  num_features_numeric(x) / num_features(x)
+}
+
+#' The Proportion of Binary Features in the Data Set.
+#'
+#' \code{proportion_features_binary} computes the proportion of features that
+#' are binary.
+#'
+#' @inheritParams F1
+#' @return The proportion of features that are binary in the input data set.
+#' @export
+
+proportion_features_binary <- function(x){
+  num_features_binary(x) / num_features(x)
+}
+
+#' The Proportion of Categorical Features in the Data Set.
+#'
+#' \code{proportion_features_categorical} computes the proportion of features
+#' that are categorical.
+#'
+#' @inheritParams F1
+#' @return The proportion of features that are categorical in the input data
+#'  set.
+#' @export
+
+proportion_features_categorical <- function(x){
+  num_features_categorical(x) / num_features(x)
+}
