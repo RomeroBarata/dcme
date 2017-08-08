@@ -15,30 +15,32 @@ devtools::install_github("RomeroBarata/dcme")
 The following complexity measures are currently implemented:
 
 ### Simple Measures
-- Number of Observations
-- Number of Features
-- Number of Classes
-- Imbalance Ratio (IR)
+- `num_examples`: Number of Observations
+- `num_examples_majority`: Number of Observations in the Majority Class
+- `num_examples_minority`: Number of Observations in the Minority Class
+- `num_features`: Number of Features
+- `num_classes`: Number of Classes
+- `IR`: Imbalance Ratio
 
-`IR` is defined only for binary data sets.
+`num_examples_majority`, `num_examples_minority`, and `IR` are defined only for binary data sets.
 
 ### Statistical Measures
-- Geometric Mean Ratio of Standard Deviations
-- Mean Absolute Correlation Coefficient
+- `sd_ratio`: Geometric Mean Ratio of Standard Deviations
+- `corr_abs`: Mean Absolute Correlation Coefficient
 
 ### Measures of Overlap of Individual Feature Values
-- Fisher's Discriminant Ratio (F1)
-- Volume of Overlap Region (F2)
+- `F1`: Fisher's Discriminant Ratio
+- `F2`: Volume of Overlap Region
 
 Unfortunately the `F1` and `F2` measures are implemented only for binary data
 sets. General versions will be made available soon.
 
 ### Measures of Separability of Classes
-- Ratio of Average Intra/Inter Class 1-NN Distance (N2)
-- Error Rate of 1-NN Classifier (N3)
+- `N2`: Ratio of Average Intra/Inter Class 1-NN Distance
+- `N3`: Error Rate of 1-NN Classifier
 
 ### Measures of Geometry, Topology, and Density of Manifolds
-- Average Number of Points per Dimension (T2)
+- `T2`: Average Number of Points per Dimension
 
 ## References
 Definitions and explanations of most functions implemented in the `dcme`
