@@ -48,6 +48,7 @@ sets. General versions will be made available soon.
 - `N3`: Error Rate of 1-NN Classifier
 
 ### Measures of Geometry, Topology, and Density of Manifolds
+- `N4`: Nonlinearity of the 1-NN Classifier
 - `T2`: Average Number of Points per Dimension
 
 ## References
